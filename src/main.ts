@@ -23,6 +23,8 @@ async function main() {
 
     round[position - 1] = player.symbol;
 
+    if (validateWinner(player, round)) break;
+
     i = !i;
   }
 }
