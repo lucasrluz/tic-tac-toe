@@ -13,6 +13,8 @@ async function main() {
   let player: IPlayer;
   let i = true;
   while (true) {
+    renderGameBoard(round);
+
     player = i ? players[0] : players[1];
     i = !i;
   }
