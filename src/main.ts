@@ -16,6 +16,9 @@ async function main() {
     renderGameBoard(round);
 
     player = i ? players[0] : players[1];
+
+    const position = await setPosition(round, player);
+
     i = !i;
   }
 }
