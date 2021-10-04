@@ -5,7 +5,7 @@ import { validateWinner } from "./service/validate-winner";
 import { setPosition } from "./input/set-position";
 import { IPlayer } from "./interface/player-interface";
 
-async function main() {
+async function start() {
   const players = await setFirstPlayer();
 
   let round = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
@@ -30,4 +30,4 @@ async function main() {
   renderGameBoard(round);
   console.log(`O jogador ${player.id}(${player.symbol}) ganhou!`);
 }
-main();
+start();
