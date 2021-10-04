@@ -21,6 +21,8 @@ async function main() {
 
     if (!position) continue;
 
+    round[position - 1] = player.symbol;
+
     i = !i;
   }
 }
