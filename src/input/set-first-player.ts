@@ -1,11 +1,11 @@
-import { IPlayer } from './player-interface';
-import { question } from './readline';
+import { IPlayer } from '../interface/player-interface';
+import { question } from '../interface/readline';
 
 export async function setFirstPlayer() {
 
   let players: IPlayer[] = [
-    { id: 'player1', symbol: '' },
-    { id: 'player2', symbol: '' }
+    { id: '1', symbol: '' },
+    { id: '2', symbol: '' }
   ];
 
   while(true) {
