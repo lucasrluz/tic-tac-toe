@@ -27,5 +27,7 @@ async function main() {
 
     i = !i;
   }
+  renderGameBoard(round);
+  console.log(`O jogador ${player.id}(${player.symbol}) ganhou!`);
 }
 main();
