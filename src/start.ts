@@ -1,4 +1,3 @@
-import { question } from './interface/readline';
 import { renderGameBoard } from './game/render-game-board';
 import { setFirstPlayer } from './input/set-first-player';
 import { validateWinner } from './service/validate-winner';
