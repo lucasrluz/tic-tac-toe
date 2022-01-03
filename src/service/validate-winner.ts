@@ -1,4 +1,4 @@
-import { IPlayer } from "../interface/player-interface";
+import { IPlayer } from '../interface/player-interface';
 
 export function validateWinner(player: IPlayer, round: string[]) {
   if (
@@ -10,7 +10,8 @@ export function validateWinner(player: IPlayer, round: string[]) {
     (round[2] === round[5] && round[2] === round[8] && round[2] !== ' ') ||
     (round[3] === round[4] && round[3] === round[5] && round[3] !== ' ') ||
     (round[6] === round[7] && round[6] === round[8] && round[6] !== ' ')
-  ) return player;
+  )
+    return player;
 
   return false;
 }
