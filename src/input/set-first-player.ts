@@ -1,5 +1,5 @@
 import { IPlayer } from '../interface/player-interface';
-import { question } from '../interface/readline';
+import inquirer from 'inquirer';
 
 export async function setFirstPlayer() {
   const players: IPlayer[] = [
@@ -10,9 +10,16 @@ export async function setFirstPlayer() {
   while (true) {
     process.stdout.write('\u001b[H\u001b[2J\u001b[3J');
 
-    players[0].symbol = String(
-      await question('Qual jogador vai começar?\n[ x ]\n[ o ]\nSua escolha: '),
-    ).toLowerCase();
+    const { firstPlayer } = await inquirer.prompt([
+      {
+        type: 'list',
+        name: 'firstPlayer',
+        message: 'Qual jogador vai começar?',
+        choices: ['x', 'o'],
+      },
+    ]);
+
+    players[0].symbol = firstPlayer;
 
     if (players[0].symbol === 'x') {
       players[1].symbol = 'o';
