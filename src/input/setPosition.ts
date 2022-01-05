@@ -8,7 +8,7 @@ export async function setPosition(round: string[], player: IPlayer) {
     {
       type: 'input',
       name: 'position',
-      message: `Em qual posição o jogador (${player.symbol}) quer jogar?\n:`,
+      message: `Em qual posição o jogador (${player.symbol}) quer jogar?`,
       validate: validateInput,
     },
   ]);
