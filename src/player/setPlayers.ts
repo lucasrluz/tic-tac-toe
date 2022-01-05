@@ -1,4 +1,4 @@
-import { IPlayer } from '../interface/player-interface';
+import { IPlayer } from '../interface/IPlayer';
 import { setPlayOrder } from '../input/setPlayOrder';
 
 export async function setPlayers() {

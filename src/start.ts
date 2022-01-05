@@ -1,8 +1,8 @@
-import { renderGameBoard } from './render/render-game-board';
-import { setPlayers } from './player/set-players';
-import { validateWinner } from './service/validate-winner';
-import { setPosition } from './input/set-position';
-import { IPlayer } from './interface/player-interface';
+import { renderGameBoard } from './render/renderGameBoard';
+import { setPlayers } from './player/setPlayers';
+import { validateWinner } from './service/validateWinner';
+import { setPosition } from './input/setPosition';
+import { IPlayer } from './interface/IPlayer';
 import { round } from './provider/round';
 
 async function start() {

@@ -1,4 +1,4 @@
-import { IPlayer } from '../interface/player-interface';
+import { IPlayer } from '../interface/IPlayer';
 
 export function validateWinner(player: IPlayer, round: string[]) {
   if (

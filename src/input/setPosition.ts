@@ -1,6 +1,6 @@
 import inquirer from 'inquirer';
-import { IPlayer } from '../interface/player-interface';
-import { validateMove } from '../service/validate-move';
+import { IPlayer } from '../interface/IPlayer';
+import { validateMove } from '../service/validateMove';
 import { validateInput } from '../service/validateInput';
 
 export async function setPosition(round: string[], player: IPlayer) {
