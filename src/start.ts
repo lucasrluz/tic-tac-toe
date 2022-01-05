@@ -1,32 +1,33 @@
-import { renderGameBoard } from './game/render-game-board';
-import { setFirstPlayer } from './input/set-first-player';
+import { renderGameBoard } from './render/render-game-board';
+import { setPlayers } from './player/set-players';
 import { validateWinner } from './service/validate-winner';
 import { setPosition } from './input/set-position';
 import { IPlayer } from './interface/player-interface';
+import { round } from './provider/round';
 
 async function start() {
-  const players = await setFirstPlayer();
+  const players = await setPlayers();
 
-  const round = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
+  let playerTurn: IPlayer;
 
-  let player: IPlayer;
   let i = true;
+
   while (true) {
     renderGameBoard(round);
 
-    player = i ? players[0] : players[1];
+    playerTurn = i ? players[0] : players[1];
 
-    const position = await setPosition(round, player);
+    const position = await setPosition(round, playerTurn);
 
     if (!position) continue;
 
-    round[position - 1] = player.symbol;
+    round[position - 1] = playerTurn.symbol;
 
-    if (validateWinner(player, round)) break;
+    if (validateWinner(playerTurn, round)) break;
 
     i = !i;
   }
   renderGameBoard(round);
-  console.log(`O jogador ${player.id}(${player.symbol}) ganhou!`);
+  console.log(`O jogador (${playerTurn.symbol}) ganhou!`);
 }
 start();
