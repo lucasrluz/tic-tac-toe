@@ -1,5 +1,5 @@
 export function validateMove(round: string[], position: number) {
-  if (position < 1 || position > 9 || round[position - 1] !== ' ') return false;
+  if (round[position - 1] === 'x' || round[position - 1] === 'o') return false;
 
   return position;
 }
